@@ -13,9 +13,9 @@
     // Connects to signalling server with given room and IP
     // has methods to exchange SDP and ICE candidates
 
-    var SignallingServer = function(room, socketServer){
+    var SignallingServer = function(room){
       this.room = room;
-      this.socket = io.connect(socketServer);
+      this.socket = io.connect('https://localhost', { secure: true });
 
       this.socket.on('full', function (room){
         trace('Room ' + room + ' is full');

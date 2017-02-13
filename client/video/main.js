@@ -3,7 +3,6 @@
   const HELPERS = angular.module('zen.videomain', []);
 
   HELPERS.factory('VideoMain', function ($location, $window, Signaling) {
-    var serverIP = "https://localhost:8000";
     var server = null;
 
     var localPeerConnection, localStream, signallingServer, localIsCaller;
@@ -105,7 +104,7 @@
 
     function establishRTCConnection(room) {
       // create signalling server
-      signallingServer = new SignallingServer(room, serverIP);
+      signallingServer = new SignallingServer(room);
       signallingServer.connect();
 
       // a remote peer has joined room, initiate sdp exchange
