@@ -18,13 +18,14 @@
       time: $scope.focus.selected.length,
       endTime: 0,
       start: function() {
-        if ($scope.timer.time > 500) {
-          $scope.timer.endTime = Timer.now() + $scope.timer.time;
-          $scope.timer.active = true;
-          toggleDisabled('timer-pause', false);
-          toggleDisabled('timer-start', true);
-          setTimeout($scope.timer.getTime, 500);
+        if ($scope.break.onBreak) {
+          $scope.timer.time = $scope.break.lengths[$scope.focus.getPattern()].length;
         }
+        $scope.timer.endTime = Timer.now() + $scope.timer.time;
+        $scope.timer.active = true;
+        toggleDisabled('timer-pause', false);
+        toggleDisabled('timer-start', true);
+        setTimeout($scope.timer.getTime, 500);
       },
       pause: function() {
         $scope.timer.active = false;
@@ -33,6 +34,7 @@
       },
       reset: function() {
         $scope.timer.pause();
+        $scope.toggleAudio('pause');
         $scope.break.onBreak = false;
         toggleDisabled('timer-start', false);
         $scope.timer.time = $scope.focus.selected.length;
@@ -41,8 +43,11 @@
         if ($scope.timer.time <= 500) {
           $scope.timer.active = false;
           toggleDisabled('timer-pause', true);
-          $scope.getBreak();
+          $scope.toggleAudio('pause');
           $scope.$apply();
+          if (!$scope.break.onBreak) {
+            $scope.getBreak();
+          }
         }
         if ($scope.timer.active) {
           $scope.timer.time = $scope.timer.endTime - Timer.now();
@@ -59,10 +64,12 @@
     $scope.wave = {
       interval: 0,
       imgSource: function(id) {
-        if (id !== $scope.wave.interval) return 'wave.png';
-        if ($scope.timer.time < 500) return 'surfer-0.png';
-        var interval = Math.ceil(($scope.timer.time) / ($scope.focus.selected.length / 3));
-        return 'surfer-' + interval + '.png';
+        if (!$scope.break.onBreak) {
+          if (id !== $scope.wave.interval) return 'wave.png';
+          if ($scope.timer.time < 500) return 'surfer-0.png';
+          var interval = Math.ceil(($scope.timer.time) / ($scope.focus.selected.length / 3));
+          return 'surfer-' + interval + '.png';
+        }
       }
     };
 

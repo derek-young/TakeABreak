@@ -15,6 +15,16 @@
       },
       hasVideo: function() {
         return this.video.length > 0;
+      },
+      lengths: {
+        Step: {
+          length: 1000 * 5 * 1,
+          formatted: '05:00'
+        },
+        Leap: {
+          length: 1000 * 60 * 10,
+          formatted: '10:00'
+        }
       }
     }
   });
@@ -75,7 +85,7 @@
         id: '1',
         focus: 'blue',
         text: '25 minutes',
-        length: 1000 * 2 * 1,
+        length: 1000 * 5 * 1,
         pattern: ['Step', 'Step', 'Step', 'Leap'],
       },
       {
@@ -85,7 +95,6 @@
         length: 1000 * 60 * 50,
         pattern: ['Step', 'Leap', 'Step', 'Leap']
       }
-
     ];
 
     return {

@@ -49,7 +49,7 @@
           <div>
             <h2>{{break.title}}</h2>
             <p>{{break.description}}</p>
-            <button class="btn btn-default" ng-click="" id="begin-break">Begin</button>
+            <button class="btn btn-default" ng-click="timer.start();toggleAudio('play');" id="begin-break">Begin {{break.lengths[focus.getPattern()].formatted}} Timer</button>
             <div ng-show="break.hasVideo()" ng-bind-html="videoSource() | trustedhtml"></div>
             <div id="audio-controls" ng-show="break.hasAudio()">
               <div class="btn-group">

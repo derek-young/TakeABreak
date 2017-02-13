@@ -1,17 +1,3 @@
-/*
-#fff7e8 - background
-#fff9d6 - bit darker
-#512690 - purpleish main
-#ffbbbf - salmon
-#ff907c - darker salmon - text
-#ffcf97 - orangy
-#00ffc9 - green darker
-#baffa0 - green lighter
-
-background: linear-gradient(to left, #ee0979 , #ff6a00);
-background: linear-gradient(rgba(245, 245, 220, 0.98), #82ccc8));
-*/
-
 html, body {
   height: 100%;
 }
@@ -94,7 +80,7 @@ iframe {
 }
 
 #home-container {
-  margin-bottom: 80px;
+  margin-bottom: 200px;
 }
 
 #break {
@@ -153,8 +139,8 @@ iframe {
   width: 100%
 }
 
-#audio-controls {
-  margin: 20px 0;
+#audio-controls, #begin-break {
+  margin-bottom: 20px;
 }
 
 .start {
