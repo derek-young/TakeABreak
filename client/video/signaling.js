@@ -15,7 +15,7 @@
 
     var SignallingServer = function(room){
       this.room = room;
-      this.socket = io.connect('https://localhost', { secure: true });
+      this.socket = io.connect();
 
       this.socket.on('full', function (room){
         trace('Room ' + room + ' is full');
