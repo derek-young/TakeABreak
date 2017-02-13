@@ -2,7 +2,7 @@
   {
     "length": "step",
     "type": "mental",
-    "title": "Breathe deeply for three to five minutes.",
+    "title": "Breathe.",
     "audio": "",
     "video": "",
     "description": "Inhale and feel your chest expand. Hold the breath gingerly, like an egg in your hands. Slowly release it back into the world. Repeat. Repeat. Repeat."
@@ -66,7 +66,7 @@
   {
     "length": "step",
     "type": "physical",
-    "title": "Exercise.",
+    "title": "Jumping Jacks.",
     "audio": "",
     "video": "",
     "description": "Jumping jacks, one minute. Then a minute's rest. Repeat this three times."
@@ -74,7 +74,7 @@
   {
     "length": "step",
     "type": "physical",
-    "title": "Plank",
+    "title": "Planks.",
     "audio": "",
     "video": "",
     "description": "Hold a front plank for one minute. Then hold a side plank on each side for 30 seconds."
@@ -82,7 +82,7 @@
   {
     "length": "leap",
     "type": "mental",
-    "title": "Odd satisfication.",
+    "title": "Odd Satisfication.",
     "audio": "",
     "video": "sCqgCAZ_N2A",
     "description": "Treat yourself with a small distraction. Enjoy this oddly-satisfying video."
@@ -162,7 +162,7 @@
   {
     "length": "leap",
     "type": "mental",
-    "title": "Comedy show",
+    "title": "Comedy.",
     "audio": "",
     "video": "4u2ZsoYWwJA",
     "description": "Laugh with Louis CK."
@@ -173,7 +173,7 @@
     "title": "Tai Chi",
     "audio": "",
     "video": "vHBR5MZmEsY",
-    "description": "Do Tai Chi"
+    "description": "Tai Chi is an internal Chinese martial art practiced for both its defense training and its health benefits. Clear your mind and move your body with ten minutes of Tai Chi."
   },
   {
     "length": "step",
