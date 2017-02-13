@@ -3,7 +3,7 @@
   const HELPERS = angular.module('zen.videomain', []);
 
   HELPERS.factory('VideoMain', function ($location, $window, Signaling) {
-    var serverIP = "http://localhost:8000";
+    var serverIP = "https://localhost:8000";
     var server = null;
 
     var localPeerConnection, localStream, signallingServer, localIsCaller;
