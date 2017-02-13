@@ -34,7 +34,6 @@ iframe {
 }
 
 .view-body {
-  /*min-height: 60%;*/
   color: #656565;
 }
 
@@ -79,7 +78,7 @@ iframe {
   display: table;
 }
 
-#home-container {
+#home-container, .view-body {
   margin-bottom: 200px;
 }
 
@@ -169,7 +168,6 @@ iframe {
 
 .container {
   width: 35%;
-  /*background-color: #f2f2f2;*/
   background-color: #82ccc8;
   border: 1px solid #ccc;
   padding: 20px;
@@ -180,7 +178,6 @@ iframe {
 
 
 /*   VIDEO   */
-
 video {
   margin: 10px;
   width: 700px;
@@ -208,6 +205,16 @@ video {
   width: 150px;
 }
 
-#startTime, #repeatDay, #endTime, #breakType {
-  width: 40%;
+
+/*   SETTINGS   */
+#breakType {
+  width: 100px;
+}
+
+#endTime, #startTime, #repeatDay {
+  width: 75px;
+}
+
+#setting-from-to {
+  margin-bottom: 20px;
 }

@@ -1,9 +1,9 @@
 <div class="view-body">
   <div ng-model="viewSetting" class="container">
     <span ng-click="get()">
-      <button ng-click="showEdit=!showEdit" class="btn btn-primary" ng-click="get()">{{showEdit ? "View Setting" : "Edit Setting"}}</button>
+      <button ng-click="showEdit=!showEdit" class="btn btn-primary" ng-click="get()">{{showEdit ? "View Settings" : "Edit Settings"}}</button>
     </span>
-    <table ng-show="!showEdit" ng-model="settingData">
+    <table ng-show="false" ng-model="settingData">
       <thead>
         <td>Day</td>
         <td>Start Time</td>
@@ -19,8 +19,14 @@
     </table>
   </div>
   <div class="container" ng-show="showEdit">
-
     <form novalidate ng-submit="update(day, startTime, endTime, breakType)" >
+      <div class="form-group">
+        <label for="breakType">Break Type</label>
+        <select class="form-control" id="breakType" ng-model="breakType">
+          <option>Blue</option>
+          <option>White</option>
+        </select>
+      </div>
       <div class="form-group">
         <label for="daySetting">Day</label>
         <select ng-model="day" class="form-control" id="repeatDay">
@@ -33,21 +39,12 @@
           <option>Sun</option>
         </select>
       </div>
-      <div>
-        <label for="startTime">From: </label>
-        <input type="time" id="startTime" name="input" ng-model="startTime"placeholder="HH:mm:ss" required />
-      </div>
-      <div>
-        <label for="endTime">To: </label>
-        <input type="time" id="endTime" name="input" ng-model="endTime" placeholder="HH:mm:ss" required />
-
-      </div>
-      <div class="form-group">
-        <label for="breakType">Break Type</label>
-        <select class="form-control" id="breakType" ng-model="breakType">
-          <option>Blue</option>
-          <option>White</option>
-        </select>
+      <div id="setting-from-to">
+          <label for="startTime">From: </label>
+          <input type="time" id="startTime" name="input" ng-model="startTime"placeholder="HH:mm:ss" required />
+          &nbsp;
+          <label for="endTime">To: </label>
+          <input type="time" id="endTime" name="input" ng-model="endTime" placeholder="HH:mm:ss" required />
       </div>
       <div class="form-group">
         <label for="themeFile">Set custom theme for App</label>
