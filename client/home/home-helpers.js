@@ -18,7 +18,7 @@
       },
       lengths: {
         Step: {
-          length: 1000 * 5 * 1,
+          length: 1000 * 60 * 5,
           formatted: '05:00'
         },
         Leap: {
@@ -85,7 +85,7 @@
         id: '1',
         focus: 'blue',
         text: '25 minutes',
-        length: 1000 * 60 * 25,
+        length: 1000 * 5 * 1,
         pattern: ['Step', 'Step', 'Step', 'Leap'],
       },
       {
