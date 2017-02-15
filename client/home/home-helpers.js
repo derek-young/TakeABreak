@@ -18,7 +18,7 @@
       },
       lengths: {
         Step: {
-          length: 1000 * 60 * 5,
+          length: 1000 * 5 * 1,
           formatted: '05:00'
         },
         Leap: {
