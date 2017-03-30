@@ -1,6 +1,6 @@
-# Take a Break
+# ZenBro
 
-A web platform to send friendly reminders to take breaks, increase productivity, and grow.
+A web platform to maintain a healthy work day. Use the Pomodoro technique to take breaks throughout the day, increase productivity, and grow.
 
 ## Team
 
@@ -20,8 +20,10 @@ A web platform to send friendly reminders to take breaks, increase productivity,
 
 ## Usage
 
-//TODO
-> Some usage instructions
+- Setup your breaks for every 25 or 50 minutes
+- Receive a notification when the timer is up
+- Follow the break prompt provided
+- When the break is complete, the timer will automatically reset and countdown to the next break; you can get back to enjoying your work
 
 ## Requirements
 
@@ -36,15 +38,20 @@ A web platform to send friendly reminders to take breaks, increase productivity,
 
 ### Installing Dependencies
 
+### Installing Dependencies
+
 From within the root directory:
 
 ```sh
-npm install
+
+  ~ npm install
+  ~ npm start
+
+  * Download MongoDB
+  * Create db user and update server/db/database.js
+  * Start MongoDB ~ mongod
+  * Open localhost:8000
 ```
-
-### Roadmap
-
-View the project roadmap [here](https://github.com/AlmondBrothers/TakeABreak/projects/1)
 
 
 ## Contributing
