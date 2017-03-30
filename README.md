@@ -38,8 +38,6 @@ A web platform to maintain a healthy work day. Use the Pomodoro technique to tak
 
 ### Installing Dependencies
 
-### Installing Dependencies
-
 From within the root directory:
 
 ```sh
